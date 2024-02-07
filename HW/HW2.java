@@ -14,7 +14,7 @@ public class Solution {
 }
 
 
-/* Using binary search algorithm and find the first bad version.
+/*Using binary search algorithm and find the first bad version.
 Initialize two pointers, left and right, representing the range of versions to search within.
 While left < right, calculate the midpoint.
 Then check if mid is a bad version using the isBadVersion API:
