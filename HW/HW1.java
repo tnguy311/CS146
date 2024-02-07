@@ -1,21 +1,30 @@
-public class PalindromeChecker {
-    public static boolean isPalindrome(String s) {
-        // Convert the string to lowercase and remove non-alphanumeric characters
-        s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
-
-        // Check if the string is a palindrome using a brute force approach
-        int n = s.length();
-        for (int i = 0; i < n / 2; i++) {
-            if (s.charAt(i) != s.charAt(n - i - 1)) {
-                return false;
+public class CheckPalindrome {
+    public static void CheckPalindrome(String s) {
+        // Convert the input string to lowercase
+        String lowercaseString = s.toLowerCase();
+        
+        // Remove all non-alphanumeric characters from the string
+        StringBuilder alphanumericString = new StringBuilder();
+        for (char c : lowercaseString.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                alphanumericString.append(c);
             }
         }
-        return true;
+        
+        // Check if string is a palindrome
+        boolean palindromeCheck = alphanumericString.toString().equals(alphanumericString.reverse().toString());
+        
+        // Print the result
+        if (palindromeCheck) {
+            System.out.println("Is the string a palindrome? Yes.");
+        } else {
+            System.out.println("Is the string a palindrome? No.");
+        }
     }
 
     public static void main(String[] args) {
-        String s = "Murder for a jar of red rum.";
-        boolean result = isPalindrome(s);
-        System.out.println(result);
+        String inputString = "A man, a plan, a canal: Panama";
+        isPalindrome(inputString);
     }
 }
+
