@@ -9,6 +9,6 @@ def is_palindrome(s):
     return alphanumeric_string == alphanumeric_string[::-1]
 
 # Testing function
-input_string = "A man, a plan, a canal: Panama"
+input_string = "Murder for a jar of red rum."
 is_palindrome_result = is_palindrome(input_string)
 print("Is the string a palindrome?", is_palindrome_result)
