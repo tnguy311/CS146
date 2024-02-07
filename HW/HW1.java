@@ -14,7 +14,7 @@ public class PalindromeChecker {
     }
 
     public static void main(String[] args) {
-        String s = "A man, a plan, a canal: Panama";
+        String s = "Murder for a jar of red rum.";
         boolean result = isPalindrome(s);
         System.out.println(result);
     }
