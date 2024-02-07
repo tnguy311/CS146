@@ -1,9 +1,9 @@
 public class CheckPalindrome {
-    public static void CheckPalindrome(String s) {
-        // Convert the input string to lowercase
+    public static void isPalindrome(String s) {
+        // Convert input string to lowercase
         String lowercaseString = s.toLowerCase();
         
-        // Remove all non-alphanumeric characters from the string
+        // Remove non-alphanumeric
         StringBuilder alphanumericString = new StringBuilder();
         for (char c : lowercaseString.toCharArray()) {
             if (Character.isLetterOrDigit(c)) {
@@ -11,7 +11,7 @@ public class CheckPalindrome {
             }
         }
         
-        // Check if string is a palindrome
+        // Check string
         boolean palindromeCheck = alphanumericString.toString().equals(alphanumericString.reverse().toString());
         
         // Print the result
