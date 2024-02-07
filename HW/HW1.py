@@ -15,6 +15,6 @@ def is_palindrome(s):
         print("Is the string a palindrome? No.")
 
 # Test the function
-input_string = "A man, a plan, a canal: Panama"
+input_string = "Murder for a jar of red rum."
 is_palindrome(input_string)
 
