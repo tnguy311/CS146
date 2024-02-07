@@ -1,4 +1,4 @@
-def is_palindrome(s):
+def palindrome(s):
     # Convert the string to lowercase
     lowercase_string = s.lower()
     
@@ -16,5 +16,5 @@ def is_palindrome(s):
 
 # Test the function
 input_string = "Murder for a jar of red rum."
-is_palindrome(input_string)
+palindrome(input_string)
 
