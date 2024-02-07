@@ -16,7 +16,7 @@ public class Solution {
         Solution solution = new Solution();
         String a = "silent";
         String b = "listen";
-        boolean result = solution.isAnagram(s, t);
+        boolean result = solution.isAnagram(a, b);
         System.out.println(result);
     }
 }
