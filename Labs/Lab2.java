@@ -5,8 +5,8 @@ public class Solution {
         if (a.length() != b.length()) {
             return false;
         }
-        char[] sArray = a.toCharArray();
-        char[] tArray = b.toCharArray();
+        char[] aArray = a.toCharArray();
+        char[] bArray = b.toCharArray();
         Arrays.sort(aArray);
         Arrays.sort(bArray);
         return Arrays.equals(aArray, bArray);
