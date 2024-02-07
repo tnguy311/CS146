@@ -1,5 +1,5 @@
 class Solution:
-    def firstBadVersion(self, n):
+    def BadVersion(self, n):
         left, right = 1, n
         while left < right:
             mid = left + (right - left) // 2
