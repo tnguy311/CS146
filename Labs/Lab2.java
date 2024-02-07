@@ -20,3 +20,9 @@ public class Solution {
         System.out.println(result);
     }
 }
+
+/*Sorting the characters in both strings and comparing if the sorted versions are equal.
+In Java implementations, we use the Arrays.sort() method.
+We then compare the sorted strings using the Arrays.equals() method.
+If the lengths of the strings are different, they cannot be anagrams, so we return false.
+Otherwise, we return the result of the comparison. If the sorted strings are equal, it means the strings are anagrams, so we return true otherwise, we return false.*/
