@@ -1,14 +1,20 @@
 def is_palindrome(s):
-    # Convert the input string to lowercase
+    # Convert the string to lowercase
     lowercase_string = s.lower()
     
-    # Remove all non-alphanumeric characters from the string
+    # Remove all non-alphanumeric characters in the string
     alphanumeric_string = ''.join(char for char in lowercase_string if char.isalnum())
     
-    # Check if the modified string is a palindrome
-    return alphanumeric_string == alphanumeric_string[::-1]
+    # Check if string is a palindrome
+    palindrome_check = alphanumeric_string == alphanumeric_string[::-1]
+    
+    # Print the result
+    if palindrome_check:
+        print("Is the string a palindrome? Yes.")
+    else:
+        print("Is the string a palindrome? No.")
 
-# Testing function
-input_string = "Murder for a jar of red rum."
-is_palindrome_result = is_palindrome(input_string)
-print("Is the string a palindrome?", is_palindrome_result)
+# Test the function
+input_string = "A man, a plan, a canal: Panama"
+is_palindrome(input_string)
+
