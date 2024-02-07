@@ -23,7 +23,7 @@ public class CheckPalindrome {
     }
 
     public static void main(String[] args) {
-        String inputString = "Murder for a jar of red rum";
+        String inputString = "Murder for a jar of red rum.";
         isPalindrome(inputString);
     }
 }
