@@ -1,8 +1,21 @@
 Problem 1:
   1. n^3 is asymtotically greater than 10000000000n^2
   2. n^2 log(n) is asymtotically greater than n(log(n))^10
-  3. 2^sqrt(n) is asymtotically greater than nlogn
+  3. 2^sqrt(n) is asymtotically greater than n^logn
   4. 2^2(n) is asymtotically greater than 2^n
 
 Problem 2:
-  
+  isPrime(n): 
+  for(i = 2, i*i <= n; i++) {
+    if(n % i == 0) {
+      return false
+    }
+  return true
+
+i*i = n
+i^2 = n
+i = theta(sqrt(n))
+ 
+1. Best Case: O(1)
+2. Worst Case: O(sqrt(n))
+3. Average Case: O(sqrt(n))
