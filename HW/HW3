@@ -1,1 +1,40 @@
+Problem 1:
+Insertion Sort is a way to sort a list of items. It looks at each item and puts it in the right place relative to the items before it. 
+It keeps doing this until all items are in order. 
+This sorting method is straightforward and effective for small lists, but it can be slow for large lists.
+To analyze its time complexity for:
 
+Best Case
+The best-case scenario occurs when the array is already sorted. In this case, the inner loop will only perform comparisons without any sorting since each element will be compared with its predecessors, but none will be moved.
+- Comparisons: O(n)
+- Swaps: O(1) (No swaps are needed)
+- Total Time Complexity: O(n)
+
+Worst Case
+The worst-case scenario occurs when the array is sorted in reverse order. In this case, each element will need to be compared and shift all the way to the beginning of the array.
+- Comparisons: O(n^2)
+- Swaps: O(n^2)
+- Total Time Complexity: O(n^2)
+
+Average Case
+In the average case, the elements are assumed to be randomly ordered. The number of comparisons and swaps will be somewhere between the best and worst cases.
+- Comparisons: O(n^2)
+- Swaps: O(n^2)
+- Total Time Complexity: O(n^2)
+
+Conclusion
+In the worst and average cases Insertion Sort has a quadratic time complexity which would make it inefficient for large datasets. It's efficient for small datasets and often used in practice for sorting small arrays.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Problem 2:
+
+n: The number of rows in matrix A.
+m: The number of columns in matrix A (also the number of rows in matrix B).
+p: The number of columns in matrix B.
+
+The nested loops iterate over all elements of the resulting matrix. 
+The outer loop runs n times, the inner loop runs p times, 
+and the nested loop runs m times. 
+Within the innermost loop, there's a constant number of operations. 
+the overall time complexity for this operation can be expressed as 
+O(n x p x m).
