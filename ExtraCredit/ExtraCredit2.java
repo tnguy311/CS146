@@ -9,6 +9,6 @@ public class Main {
         return fib[n];
     }
     public static void main(String[] args) {
-        System.out.println(fibonacci(10));
+        System.out.println(fibonacci(n));
     }
 }
