@@ -4,5 +4,16 @@ Problem 1:
 -Average Case: (O(n^2)) - In the average case, where elements are randomly ordered, Insertion Sort takes quadratic time as it needs to compare and potentially move each element multiple times.
 -Worst Case: (O(n^2)) - In the worst case, where the array is in reverse order. The insertion sort becomes inefficient and need a quadratic number of comparisons/swaps.
 
-The time complexity for Insertion Sort for best case is (O(n)), and (O(n^2)) for the average cases and worst cases,
-the Insertion Sort works best when the list is already in order, but it can be slow if the list is in reverse order or if it's too large.
+The insertion sort's time complexity for best case is (O(n)), and (O(n^2)) for the average cases and worst cases.
+
+Problem 2:
+
+-Best Case: The matrices are optimally sized for multiplication, the time complexity is (O(rowsA * colsA * colsB)).
+
+-Average Case: We assume that the matrices sizes are not optimized for efficient multiplication,
+  the number of rows in matrix A may not be equal to the number of columns in matrix B, which makes the time complexity remains (O(rowsA * colsA * colsB)).
+
+-Worst Case: If the matrices cannot be multiplied due to incompatible dimensions such as the number of rows in matrix A not equal to the number of columns in matrix B,
+  the algorithm exits immediately with a time complexity of (O(1)).
+
+The time complexity for matrix multiplication of the pseudocode example is (O(rowsA * colsA * colsB)) in most cases. Except where matrices cannot be multiplied, where it's (O(1)).
