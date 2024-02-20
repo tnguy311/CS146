@@ -2,9 +2,9 @@ Problem 1:
 -Recurrence 1: T(N) = 2T(N-1) + 1
 recursion tree method:
                 T(N)
-             /        \
+          |             |
         T(N-1)        T(N-1)
-       /      \      /      \
+      |        |      |       |
     T(N-2)   T(N-2) T(N-2)  T(N-2)
 
 The tree has a height of N, each level has twice as much nodes as the previous level. Which mean the total number of nodes is 2^N. Time complexity: O(2^N).
