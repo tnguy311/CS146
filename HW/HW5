@@ -1,1 +1,40 @@
+Problem 1:
+-Recurrence 1: T(N) = 2T(N-1) + 1
+recursion tree method:
+                T(N)
+             /        \
+        T(N-1)        T(N-1)
+       /      \      /      \
+    T(N-2)   T(N-2) T(N-2)  T(N-2)
 
+The tree has a height of N, each level has twice as much nodes as the previous level. Which mean the total number of nodes is 2^N. Time complexity: O(2^N).
+
+-Recurrence 2: T(N) = 3T(N-1) + n
+
+Using the master theorem a = 3, b = 1, f(N) = n. Since(f(N)) is larger than N^{log_b a}, which N^0 = 1. Time complexity: O(n^2).
+
+-Recurrence 3: T(N) = 9T(N/2) + n^2
+
+Using master theorem a = 9, b = 2, and f(N) = n^2. Since f(N) is larger than N^{log_b a}, which is N^{log_2 9} = N^{log_2 3^2} = N^{log_2 3 cdot 2} = N^2. Time complexity: O(n^2 log n).
+
+-Recurrence 4: T(N) = 100T(N/2) + n^log2 (cn) + 1
+
+Using the master theorem, we have a= 100, b = 2, N^logb(a) = N^log2(100) = N^log2(10^2) = N^2. Time complexity: O(n^2)
+
+-Recurrence 5: T(N) = 4T(N/2) + n^2 log n
+
+Using the master theorem a = 4, b = 2, and f(N) = n^2 log n. Since f(N) is larger than N^{log_b a}, which is N^{log_2 4} = N^2. Time complexity is O(n^2 log n).
+
+-Recurrence 6: T(N) = 5T(N/2) + n^2 logn
+
+master theorem, a = 5, b = 2, and f(N) = n^2 log n. Since f(N) is larger than N^{log_b a}, which is N^{log_2 5}. Time complexity is O(n^{log_2 5}).
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Problem 2:
+the function `yetAnotherFunc` is called twice with (n/2), and there is a loop that iterates (10n) times.
+
+Denote T(n) as the time complexity for `yetAnotherFunc(n)`:
+
+T(n) = 2T(n/2) + 10n
+
+Due to the function being called twice half the size of n, and the loop iterates 10n times.
+Since the loop dominates the time complexity, the solution will be O(n).
