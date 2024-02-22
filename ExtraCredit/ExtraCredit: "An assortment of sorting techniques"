@@ -1,0 +1,11 @@
+The stability of a sorting algorithm keeps the order of equal elements in the input array intact after sorting.
+If there are two equal elements in the original array, a stable sorting algorithm would help make them they stay in the same order in the sorted array.
+
+Stability is useful because it:
+Helps maintain the original order of data, which can be important in various applications.
+Makes sorting by multiple criteria more predictable.
+Ensures consistent behavior across different runs of the algorithm.
+
+If a sorting algorithm isn't stable, it may:
+Rearrange equal elements, leading to unexpected output.
+Produce inconsistent results based on factors like input order or algorithm details.
