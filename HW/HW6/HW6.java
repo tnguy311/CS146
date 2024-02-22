@@ -4,7 +4,7 @@
         
         for (int i = 0; i < nums.length - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1])
-                continue;    // Skip duplicate fixed numbers
+                continue;    // skip duplicate fixed numbers
             
             int target = -nums[i];
             Set<Integer> seen = new HashSet<>(); 
@@ -12,7 +12,7 @@
             for (int j = i + 1; j < nums.length; j++) {
                 int complement = target - nums[j];
                 
-                // Add the triplet to the result, if complemen is in the set.
+                // if complemn is in the set, add the triplet to the result.
                 if (seen.contains(complement)) {
                     result.add(Arrays.asList(nums[i], complement, nums[j]));
                     
@@ -33,7 +33,7 @@
         Solution solution = new Solution();
         int[] nums1 = {0, 1, 1};
         int[] nums2 = {-5, 0, 5, 10, -10, 0};
-        System.out.println(solution.threeSum(nums1));  // Output: []
-        System.out.println(solution.threeSum(nums2));  // Output: [[-10, 0, 10], [-5, 0, 5]]
+        System.out.println(solution.threeSum(nums1));
+        System.out.println(solution.threeSum(nums2));
     }
 }
