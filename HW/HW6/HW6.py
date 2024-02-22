@@ -1,11 +1,10 @@
 def threeSum(self, nums: List[int]) -> List[List[int]]:
         result = []
-        nums.sort()  # Sort the array to simplify the process
+        nums.sort()  # Sort the array 
 
         for i in range(len(nums) - 2):
-            # Skip duplicate fixed numbers
             if i > 0 and nums[i] == nums[i - 1]:
-                continue
+                continue     # Skip duplicate fixed numbers
 
             target = -nums[i]
             seen = set()  # Hash set to store unique pairs
@@ -27,5 +26,5 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
 
 # Test cases
 solution = Solution()
-print(solution.threeSum([0, 1, 1]))  # Output: []
+print(solution.threeSum([0, 1, 1]));
 print(solution.threeSum([-5, 0, 5, 10, -10, 0]))  # Output: [[-10, 0, 10], [-5, 0, 5]]
