@@ -3,7 +3,7 @@
 We can utilize max heaps as priority queues: the root always holds the element with highest priority, or in the maximum value.
 - Insertion and extraction of the maximum element take (O(log n)) time.
 - Pseudocode:
-       plaintext
+
      MaxHeapPriorityQueue:
          insert(element):
              heap.insert(element)
@@ -18,7 +18,7 @@ We can utilize max heaps as priority queues: the root always holds the element w
 When repurposing a max heap as a min heap, one must negate all values during the process of inserting and extracting elements.
 - This transformation preserves the heap structure while reversing the order of elements.
 - Pseudocode:
-       plaintext
+
      MaxHeapAsMinHeap:
          insert(element):
              heap.insert(-element)
