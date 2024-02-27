@@ -12,6 +12,7 @@ We can utilize max heaps as priority queues: the root always holds the element w
              max_element = heap.extract_max()
              return max_element
 
+
 2. Using Max Heap as Min Heap:
 
 When repurposing a max heap as a min heap, one must negate all values during the process of inserting and extracting elements.
