@@ -16,5 +16,4 @@ class Solution {
         }
         return rooms.size();
     }
-
 }
