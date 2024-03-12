@@ -1,16 +1,28 @@
-class TreeNode(object):
+class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
-class Solution(object):
-    def isValidBST(self, root):
-        def validate(node, minVal, maxVal):
-            if not node:
-                return True
-            if not (minVal < node.val < maxVal):
-                return False
-            return validate(node.left, minVal, node.val) and validate(node.right, node.val, maxVal)
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        currentNode = root
         
-        return validate(root, float('-inf'), float('inf'))
+        while currentNode:
+            if p.val < currentNode.val and q.val < currentNode.val:
+                currentNode = currentNode.left
+            elif p.val > currentNode.val and q.val > currentNode.val:
+                currentNode = currentNode.right
+            else:
+                return currentNode
+        
+        return None
+
+
+# This function is what we'll call to find the LCA.
+# Start with the root of the tree
+# Keep searching until we find the solution
+# If both p and q are less than the current node, go left
+# If both p and q are more than the current node, go right
+# If neither of the above cases are true, we've found our LCA
+# This return is just in case, but we should have found the LCA before this
