@@ -22,5 +22,5 @@ class Solution:
 # We start with the root of the tree
 # Keep searching until we find the solution
 # If both p and q are less than the current node, go left
-# If both p and q are more than the current node, go right
+# If both p and q more than the current node, go right
 # If neither of the above cases are true, we've found our LCA
