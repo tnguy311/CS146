@@ -2,6 +2,7 @@ public class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
+
     TreeNode() {}
     TreeNode(int val) { this.val = val; }
     TreeNode(int val, TreeNode left, TreeNode right) {
@@ -12,17 +13,28 @@ public class TreeNode {
 }
 
 public class Solution {
-    public boolean isValidBST(TreeNode root) {
-        return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
-    }
-    
-    private boolean validate(TreeNode node, long minVal, long maxVal) {
-        if (node == null) {
-            return true;
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        TreeNode currentNode = root;
+        
+        while (currentNode != null) {
+            if (p.val < currentNode.val && q.val < currentNode.val) {
+                currentNode = currentNode.left;
+            } else if (p.val > currentNode.val && q.val > currentNode.val) {
+                currentNode = currentNode.right;
+            } else {
+                return currentNode;
+            }
         }
-        if (node.val <= minVal || node.val >= maxVal) {
-            return false;
-        }
-        return validate(node.left, minVal, node.val) && validate(node.right, node.val, maxVal);
+        
+        return null;
     }
 }
+
+
+// Start from the root node of the tree
+// Loop until we find the LCA
+// Then if both nodes p and q are smaller than currentNode, move to the left child
+// If both nodes p and q are larger than currentNode, move to the right child
+// If the above conditions are false, it means we have found the split point,
+// either both p and q are on different sides of currentNode, or one of p or q is equal to currentNode.
+// return null indicating the LCA wasn't found.
