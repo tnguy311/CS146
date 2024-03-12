@@ -19,10 +19,8 @@ class Solution:
         return None
 
 
-# This function is what we'll call to find the LCA.
-# Start with the root of the tree
+# We start with the root of the tree
 # Keep searching until we find the solution
 # If both p and q are less than the current node, go left
 # If both p and q are more than the current node, go right
 # If neither of the above cases are true, we've found our LCA
-# This return is just in case, but we should have found the LCA before this
