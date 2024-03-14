@@ -20,8 +20,9 @@ class Solution(object):
             self.invertTree(root.right)
 
         return root
-        
-# If the tree is empty, there's nothing to invert then return None
-# Then swap the left and right children of the current node
-# Recursively invert the left subtree, recursively invert the right subtree
-# Return the root of the inverted tree
+
+
+# If the tree is empty, we return None as there's nothing to invert.
+# For each non-None node in the tree, we swap its left and right children. Inverts the subtree rooted at this node.
+# After swapping the children, we recursively call the `invertTree` function for both the left and right children of the current node. This repeats the swapping process for each subtree.
+# Finally, we return the root node of the inverted tree.
