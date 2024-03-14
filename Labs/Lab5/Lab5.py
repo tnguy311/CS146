@@ -25,7 +25,9 @@ class Solution(object):
         
         return True
 
-# Initialize variables for in-order traversal
-# Perform in-order traversal
-# Check if current node violates BST property
-# Update previous node
+
+
+# We define a TreeNode class to represent the nodes of the binary tree, similar to the Java implementation.
+# Public method `isValidBST' takes the root of the binary tree as input and returns a boolean whether the tree is a valid BST. 
+# At each node, it checks if the node's value is within the valid range defined by `min_val` and `max_val`. If the node's value not in this range, the method returns false, indicating the tree is not a valid BST. Otherwise, it calls itself for the left and right subtrees, updating the `min_val` and `max_val` values.
+# If the current node is None indicating the end of a branch, the method returns true.
