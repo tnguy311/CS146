@@ -61,11 +61,7 @@ public class BinaryTreeTraversal {
     }
 }
 
-// Define TreeNode class: The TreeNode class represents a node in a binary tree. It contains attributes for the node value, left child, and right child. Constructors are provided for initializing the node with or without child nodes.
-
-// Define Solution class: The Solution class contains the levelOrder method, which performs a level-order traversal of a binary tree. It uses a queue-based approach to traverse the tree level by level, storing the values of nodes at each level in a list of lists.
-
-// Main method (for testing): The main method serves as a testing ground for the BinaryTreeTraversal class. It creates an example binary tree, invokes the levelOrder method to perform the traversal, and prints the resulting level-order traversal to the console.
-
-// Output: [[4], [3, 8], [1, 5, 9]]: This line indicates the expected output of the level-order traversal performed in the main method. Each inner list represents the values of nodes at a particular level of the binary tree.
-
+// The TreeNode class defines a node in a binary tree.
+// The Solution class implements the levelOrder method, which conducts a level-order traversal of a binary tree. 
+//It uses a queue-based approach to traverse the tree level by level, storing the values of nodes at each level in a list of lists.
+//  The main method acts as a testing environment for the BinaryTreeTraversal class. Creates a sample binary tree, calls the levelOrder method to perform the traversal and displays the resulting level-order traversal on the console.
