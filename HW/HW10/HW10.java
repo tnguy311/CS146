@@ -45,7 +45,6 @@ public class BinaryTreeTraversal {
 
     
     public static void main(String[] args) {
-        // Example usage
         TreeNode root = new TreeNode(4);
         root.left = new TreeNode(3);
         root.right = new TreeNode(8);
