@@ -1,0 +1,41 @@
+Converting Adjacency List to Adjacency Matrix:
+
+function convertToListToMatrix(adjList):
+    Initialize an empty matrix of size n x n, where n is the number of vertices in the graph
+    For each vertex v in the graph:
+        For each neighbor u of v in the adjacency list:
+            Set matrix[v][u] to 1
+    Return the resulting adjacency matrix
+
+
+Explanation:
+-For each vertex in the graph, create a row in the adjacency matrix.
+-Traverse each adjacency list and mark the corresponding entries in the matrix as 1 if there is an edge or 0 otherwise.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Converting Adjacency Matrix to Adjacency List:
+
+function convertMatrixToList(adjMatrix):
+    Initialize an empty list of lists to represent the adjacency list
+    For each row i in the adjacency matrix:
+        Initialize an empty list for the current vertex's neighbors
+        For each column j in the row:
+            If matrix[i][j] is 1:
+                Append j to the list of neighbors for vertex i
+        Append the list of neighbors to the adjacency list
+    Return the resulting adjacency list
+
+Explanation:
+-For each row in the adjacency matrix, create a list of vertices connected to the current vertex (represented by the row).
+-Traverse each row in the matrix and add the indices of vertices where the value is 1 to the corresponding adjacency list.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Reversing the Direction of Each Edge in a Directed Graph:
+
+function reverseEdges(graph):
+    For each edge (u, v) in the graph:
+        Remove edge (u, v)
+        Add edge (v, u) to the graph
+
+Explanation:
+-Traverse each edge in the graph and reverse the direction by swapping the source and destination vertices.
