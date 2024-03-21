@@ -12,8 +12,8 @@ def floodFill(self, image, sr, sc, color):
         dfs(image, sr, sc, image[sr][sc], color)
     return image
 
-# The Python solution utilizes a recursive Depth-First Search (DFS) approach to traverse the image pixels connected to the starting pixel.
-# It defines a helper function dfs that recursively visits neighboring pixels, updating their color if they match the starting pixel's color.
-# The process continues until all connected pixels of the same color are visited.
-# If the starting pixel's color is different from the specified color, the function invokes the DFS to perform the flood fill.
-# Finally, it returns the modified image after the flood fill operation.
+# The solution uses a recursive approach to traverse connected pixels starting from the given pixel.
+# It defines function dfs, and visits neighboring pixels recursively and changes their color if they match the starting pixel's color.
+# The function keeps track of visited pixels to avoid infinite recursion and stops when all connected pixels of the same color are visited.
+# If the starting pixel's color is different from the specified color, the function initiates the flood fill operation.
+# The function returns the updated image after the flood fill operation.
