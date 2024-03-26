@@ -130,12 +130,11 @@ class AVLTree:
         return x
 
 
-/TreeNode Class: Represents a node in the tree, storing a key, pointers to left and right children, and a height attribute.
-
-AVLTree Class:
-
-Insertion: The insert method adds a new node while keeping the tree balanced. It recursively finds the correct position for insertion and adjusts heights. If the tree becomes unbalanced, it performs rotations to maintain balance.
-Deletion: The delete method removes a node, also ensuring the tree remains balanced. It handles various cases of deletion, such as nodes with no children or one child, and adjusts heights accordingly.
-Inorder Traversal: The inorder_traversal method prints node keys in sorted order by recursively traversing left, visiting the current node, and then traversing right.
-Utility Methods: get_height calculates node height, get_balance computes the balance factor, and get_min_value_node finds the node with the minimum key.
-Rotation Operations: left_rotate and right_rotate perform rotations to balance the tree during insertions and deletions.
+#This Python code defines an AVL tree
+#The TreeNode class represents each node in the tree, storing a key values and a height attribute. 
+#The AVLTree class contains methods for insertion, deletion, and inorder traversal. 
+#Insert method adds new nodes maintaining balance by adjusting heights and performing rotations.
+#Deletion removes nodes, handling various cases of node removal and adjusting heights. 
+#The inorder_traversal method prints node keys in sorted order by traversing left, visiting the current nod then traversing right. 
+#Utility methods get_height, get_balance and get_min_value_node calculate heights, balance factors, and find minimum value node. 
+#Rotation operations, left_rotate and right_rotate, balanced the tree structure during insertions and deletions.
