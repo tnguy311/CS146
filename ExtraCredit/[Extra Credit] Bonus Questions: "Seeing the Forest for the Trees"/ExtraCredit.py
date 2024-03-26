@@ -9,7 +9,8 @@ class AVLTree:
     def insert(self, root, key):
         if not root:
             return TreeNode(key)
-        elif key < root.key:
+        
+        if key < root.key:
             root.left = self.insert(root.left, key)
         else:
             root.right = self.insert(root.right, key)
@@ -17,6 +18,7 @@ class AVLTree:
         root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
         balance = self.get_balance(root)
 
+        # Balance the tree if necessary
         if balance > 1:
             if key < root.left.key:
                 return self.right_rotate(root)
@@ -35,7 +37,8 @@ class AVLTree:
     def delete(self, root, key):
         if not root:
             return root
-        elif key < root.key:
+        
+        if key < root.key:
             root.left = self.delete(root.left, key)
         elif key > root.key:
             root.right = self.delete(root.right, key)
@@ -64,6 +67,7 @@ class AVLTree:
         root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
         balance = self.get_balance(root)
 
+        # Rebalance the tree if necessary
         if balance > 1:
             if self.get_balance(root.left) >= 0:
                 return self.right_rotate(root)
@@ -78,6 +82,28 @@ class AVLTree:
                 return self.left_rotate(root)
         
         return root
+    
+    def inorder_traversal(self, root):
+        if root:
+            self.inorder_traversal(root.left)
+            print(root.key, end=" ")
+            self.inorder_traversal(root.right)
+    
+    def get_height(self, root):
+        if not root:
+            return 0
+        return root.height
+    
+    def get_balance(self, root):
+        if not root:
+            return 0
+        return self.get_height(root.left) - self.get_height(root.right)
+    
+    def get_min_value_node(self, root):
+        current = root
+        while current.left:
+            current = current.left
+        return current
     
     def left_rotate(self, z):
         y = z.right
@@ -102,42 +128,14 @@ class AVLTree:
         x.height = 1 + max(self.get_height(x.left), self.get_height(x.right))
 
         return x
-    
-    def get_height(self, root):
-        if not root:
-            return 0
-        return root.height
-    
-    def get_balance(self, root):
-        if not root:
-            return 0
-        return self.get_height(root.left) - self.get_height(root.right)
-    
-    def get_min_value_node(self, root):
-        current = root
-        while current.left:
-            current = current.left
-        return current
-    
-    def inorder_traversal(self, root):
-        if root:
-            self.inorder_traversal(root.left)
-            print(root.key, end=" ")
-            self.inorder_traversal(root.right)
 
-# Example usage:
-avl_tree = AVLTree()
-root = None
-keys = [9, 5, 10, 0, 6, 11, -1, 1, 2]
 
-for key in keys:
-    root = avl_tree.insert(root, key)
+/TreeNode Class: Represents a node in the tree, storing a key, pointers to left and right children, and a height attribute.
 
-print("Inorder traversal of the AVL tree after insertion:")
-avl_tree.inorder_traversal(root)
-print()
+AVLTree Class:
 
-root = avl_tree.delete(root, 10)
-
-print("Inorder traversal of the AVL tree after deletion:")
-avl_tree.inorder_traversal(root)
+Insertion: The insert method adds a new node while keeping the tree balanced. It recursively finds the correct position for insertion and adjusts heights. If the tree becomes unbalanced, it performs rotations to maintain balance.
+Deletion: The delete method removes a node, also ensuring the tree remains balanced. It handles various cases of deletion, such as nodes with no children or one child, and adjusts heights accordingly.
+Inorder Traversal: The inorder_traversal method prints node keys in sorted order by recursively traversing left, visiting the current node, and then traversing right.
+Utility Methods: get_height calculates node height, get_balance computes the balance factor, and get_min_value_node finds the node with the minimum key.
+Rotation Operations: left_rotate and right_rotate perform rotations to balance the tree during insertions and deletions.
