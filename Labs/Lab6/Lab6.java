@@ -47,3 +47,9 @@ public class CourseSchedule {
     }
 }
 
+
+//Create a graph to represent the courses and their prerequisites using a dictionary where keys represent courses and values are lists of prerequisite courses.
+//Then check if there are any cycles in the graph by using a recursive (DFS) approach. Cycles mean that the courses cannot be completed due to circular dependencies.
+//During DFS traversal maintain two arrays 'visited' to keep track of visited nodes and 'recStack' to detect cycles.
+//Perform a topological sort assuming that there are no cycles. This gives order in which the courses can be taken while ensuring that prerequisites are fulfilled.
+//Once the oder is sorted, revisit the order and ensure that all courses can be taken. If any course is encountered that hasn't been marked as completed return False, Otherwise, return True.
